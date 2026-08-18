@@ -1,0 +1,1229 @@
+/* =========================================
+   RESET
+========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family:
+        "Poppins",
+        "Kantumruy Pro",
+        sans-serif;
+
+    background: #f7f8f6;
+
+    color: #202a28;
+
+    line-height: 1.7;
+}
+
+img {
+    width: 100%;
+    display: block;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+button {
+    font-family: inherit;
+}
+
+.container {
+    width: min(1180px, 92%);
+    margin: auto;
+}
+
+.section {
+    padding: 100px 0;
+}
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+.header {
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+
+    z-index: 1000;
+
+    background:
+        rgba(12, 25, 23, .82);
+
+    backdrop-filter: blur(15px);
+
+    transition: .3s;
+}
+
+.header.scrolled {
+    background:
+        rgba(9, 22, 20, .97);
+
+    box-shadow:
+        0 8px 30px rgba(0,0,0,.15);
+}
+
+.navbar {
+    height: 78px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    display: flex;
+
+    align-items: center;
+
+    gap: 9px;
+
+    color: white;
+
+    font-size: 21px;
+
+    font-weight: 800;
+}
+
+.logo i {
+    color: #f3a83b;
+
+    font-size: 24px;
+}
+
+.logo span {
+    color: #f3a83b;
+}
+
+.nav-menu {
+    display: flex;
+
+    gap: 30px;
+
+    list-style: none;
+}
+
+.nav-menu a {
+    color: white;
+
+    font-size: 14px;
+
+    transition: .3s;
+}
+
+.nav-menu a:hover {
+    color: #f3a83b;
+}
+
+.menu-btn {
+    display: none;
+
+    border: none;
+
+    background: transparent;
+
+    color: white;
+
+    font-size: 25px;
+
+    cursor: pointer;
+}
+
+
+/* =========================================
+   HERO
+========================================= */
+
+.hero {
+    min-height: 100vh;
+
+    position: relative;
+
+    display: flex;
+    align-items: center;
+
+    background-image:
+        url(
+            "https://commons.wikimedia.org/wiki/Special:FilePath/Sompove%20Meas%20Island%2C%20Pursat%20province%2C%20Cambodia.jpg"
+        );
+
+    background-size: cover;
+
+    background-position: center;
+}
+
+.hero-overlay {
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(7,20,18,.94),
+            rgba(7,20,18,.68),
+            rgba(7,20,18,.22)
+        );
+}
+
+.hero-content {
+    position: relative;
+
+    z-index: 2;
+
+    color: white;
+
+    padding-top: 70px;
+
+    max-width: 720px;
+}
+
+.hero-label {
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    padding: 8px 15px;
+
+    border:
+        1px solid
+        rgba(255,255,255,.3);
+
+    border-radius: 30px;
+
+    background:
+        rgba(255,255,255,.08);
+
+    font-size: 13px;
+
+    margin-bottom: 22px;
+}
+
+.hero-label i {
+    color: #f3a83b;
+}
+
+.hero h1 {
+    font-size:
+        clamp(45px, 7vw, 78px);
+
+    line-height: 1.05;
+
+    margin-bottom: 25px;
+}
+
+.hero h1 span {
+    display: block;
+
+    color: #f3a83b;
+}
+
+.hero p {
+    max-width: 620px;
+
+    color: #e0e6e2;
+
+    font-size: 17px;
+
+    margin-bottom: 32px;
+}
+
+.hero-buttons {
+    display: flex;
+
+    gap: 13px;
+
+    flex-wrap: wrap;
+}
+
+
+/* =========================================
+   BUTTONS
+========================================= */
+
+.btn {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 8px;
+
+    padding:
+        13px 23px;
+
+    border-radius: 8px;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    transition: .3s;
+}
+
+.btn-primary {
+    color: #17211f;
+
+    background: #f3a83b;
+}
+
+.btn-primary:hover {
+    transform: translateY(-3px);
+
+    background: #ffc35d;
+}
+
+.btn-outline {
+    color: white;
+
+    border:
+        1px solid
+        rgba(255,255,255,.45);
+
+    background:
+        rgba(255,255,255,.08);
+}
+
+.btn-outline:hover {
+    background: white;
+
+    color: #182421;
+}
+
+.btn-white {
+    background: white;
+
+    color: #1a5142;
+}
+
+
+/* =========================================
+   QUICK CARDS
+========================================= */
+
+.quick-section {
+    position: relative;
+
+    z-index: 5;
+
+    margin-top: -55px;
+}
+
+.quick-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 16px;
+}
+
+.quick-card {
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    padding: 22px;
+
+    background: white;
+
+    border-radius: 14px;
+
+    box-shadow:
+        0 15px 35px
+        rgba(20,40,35,.10);
+
+    transition: .3s;
+}
+
+.quick-card:hover {
+    transform: translateY(-7px);
+}
+
+.quick-icon {
+    width: 55px;
+    height: 55px;
+
+    flex-shrink: 0;
+
+    display: grid;
+
+    place-items: center;
+
+    border-radius: 50%;
+
+    background: #fff3df;
+
+    color: #df8d18;
+
+    font-size: 20px;
+}
+
+.quick-icon.green {
+    background: #e6f4ed;
+    color: #26825d;
+}
+
+.quick-icon.gold {
+    background: #fff2d8;
+    color: #b77a0d;
+}
+
+.quick-icon.blue {
+    background: #e8f2f8;
+    color: #3e7898;
+}
+
+.quick-card h3 {
+    font-size: 16px;
+}
+
+.quick-card p {
+    color: #858d89;
+
+    font-size: 12px;
+}
+
+
+/* =========================================
+   SECTION HEADING
+========================================= */
+
+.section-heading {
+    max-width: 680px;
+
+    text-align: center;
+
+    margin:
+        0 auto 48px;
+}
+
+.section-heading span {
+    color: #d98c19;
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    letter-spacing: 2px;
+}
+
+.section-heading h2 {
+    font-size:
+        clamp(30px, 5vw, 44px);
+
+    line-height: 1.2;
+
+    margin:
+        8px 0 13px;
+}
+
+.section-heading p {
+    color: #7c8581;
+
+    font-size: 14px;
+}
+
+
+/* =========================================
+   PLACES
+========================================= */
+
+.places-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 25px;
+}
+
+.place-card {
+    overflow: hidden;
+
+    background: white;
+
+    border-radius: 18px;
+
+    border:
+        1px solid #e7ebe8;
+
+    transition: .3s;
+}
+
+.place-card:hover {
+    transform: translateY(-7px);
+
+    box-shadow:
+        0 20px 45px
+        rgba(25,45,40,.12);
+}
+
+.place-card.large {
+    grid-column:
+        span 2;
+
+    display: grid;
+
+    grid-template-columns:
+        1.2fr 1fr;
+}
+
+.place-image {
+    height: 250px;
+
+    position: relative;
+
+    overflow: hidden;
+}
+
+.place-card.large .place-image {
+    height: 100%;
+}
+
+.place-image img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    transition: .6s;
+}
+
+.place-card:hover
+.place-image img {
+    transform: scale(1.06);
+}
+
+.place-tag {
+    position: absolute;
+
+    top: 15px;
+    left: 15px;
+
+    padding:
+        5px 12px;
+
+    border-radius: 30px;
+
+    color: white;
+
+    background:
+        rgba(15, 35, 30, .82);
+
+    backdrop-filter: blur(5px);
+
+    font-size: 11px;
+}
+
+.place-body {
+    padding: 25px;
+}
+
+.place-type {
+    color: #d38a1b;
+
+    font-size: 11px;
+
+    font-weight: 600;
+
+    margin-bottom: 6px;
+}
+
+.place-type i {
+    margin-right: 5px;
+}
+
+.place-body h3 {
+    font-size: 22px;
+
+    margin-bottom: 9px;
+}
+
+.place-body p {
+    color: #747e79;
+
+    font-size: 13px;
+
+    margin-bottom: 18px;
+}
+
+.learn-link {
+    color: #27745a;
+
+    font-size: 13px;
+
+    font-weight: 700;
+}
+
+.learn-link i {
+    margin-left: 5px;
+}
+
+
+/* =========================================
+   NATURE
+========================================= */
+
+.nature-section {
+    min-height: 580px;
+
+    position: relative;
+
+    display: flex;
+    align-items: center;
+
+    background-image:
+        linear-gradient(
+            90deg,
+            rgba(7,25,20,.96),
+            rgba(7,25,20,.70),
+            rgba(7,25,20,.25)
+        ),
+        url(
+            "https://commons.wikimedia.org/wiki/Special:FilePath/Phnum%20Kravanh%2C%20Cambodia%20-%20panoramio%20%282%29.jpg"
+        );
+
+    background-size: cover;
+
+    background-position: center;
+}
+
+.nature-content {
+    color: white;
+
+    max-width: 650px;
+}
+
+.nature-text > span {
+    color: #f3b34e;
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    letter-spacing: 2px;
+}
+
+.nature-text h2 {
+    font-size:
+        clamp(35px, 5vw, 55px);
+
+    line-height: 1.1;
+
+    margin: 12px 0 20px;
+}
+
+.nature-text > p {
+    color: #d7dfda;
+
+    font-size: 14px;
+
+    max-width: 600px;
+}
+
+.nature-features {
+    display: flex;
+
+    gap: 35px;
+
+    margin-top: 35px;
+}
+
+.nature-features div {
+    display: flex;
+
+    flex-direction: column;
+}
+
+.nature-features i {
+    color: #f3b34e;
+
+    font-size: 24px;
+
+    margin-bottom: 7px;
+}
+
+.nature-features strong {
+    font-size: 14px;
+}
+
+.nature-features small {
+    color: #aebbb4;
+
+    font-size: 11px;
+}
+
+
+/* =========================================
+   CULTURE
+========================================= */
+
+.culture {
+    background: #f1f5f2;
+}
+
+.culture-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 22px;
+}
+
+.culture-card {
+    padding: 30px;
+
+    background: white;
+
+    border-radius: 16px;
+
+    border:
+        1px solid #e5ebe7;
+
+    transition: .3s;
+}
+
+.culture-card:hover {
+    transform: translateY(-6px);
+
+    box-shadow:
+        0 18px 40px
+        rgba(20,45,35,.10);
+}
+
+.culture-icon {
+    width: 55px;
+    height: 55px;
+
+    display: grid;
+
+    place-items: center;
+
+    margin-bottom: 18px;
+
+    border-radius: 12px;
+
+    background: #fff2dc;
+
+    color: #d58b18;
+
+    font-size: 21px;
+}
+
+.culture-card h3 {
+    font-size: 19px;
+
+    margin-bottom: 10px;
+}
+
+.culture-card p {
+    color: #78817d;
+
+    font-size: 13px;
+
+    margin-bottom: 17px;
+}
+
+.culture-card a {
+    color: #28775b;
+
+    font-size: 13px;
+
+    font-weight: 700;
+}
+
+
+/* =========================================
+   FEATURE PHOTO
+========================================= */
+
+.photo-section {
+    min-height: 500px;
+
+    position: relative;
+
+    display: flex;
+    align-items: center;
+
+    text-align: center;
+
+    color: white;
+
+    background-image:
+        url(
+            "https://commons.wikimedia.org/wiki/Special:FilePath/Pursat%20rice%20field.jpg"
+        );
+
+    background-size: cover;
+
+    background-position: center;
+}
+
+.photo-overlay {
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        rgba(7, 23, 19, .63);
+}
+
+.photo-content {
+    position: relative;
+
+    z-index: 2;
+}
+
+.photo-content > span {
+    color: #f3b34e;
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    letter-spacing: 2px;
+}
+
+.photo-content h2 {
+    font-size:
+        clamp(38px, 6vw, 60px);
+
+    margin:
+        8px 0 12px;
+}
+
+.photo-content p {
+    max-width: 600px;
+
+    margin:
+        0 auto 25px;
+
+    color: #dce4df;
+}
+
+
+/* =========================================
+   ABOUT
+========================================= */
+
+.about {
+    background: white;
+}
+
+.about-grid {
+    display: grid;
+
+    grid-template-columns:
+        1fr 1fr;
+
+    gap: 70px;
+
+    align-items: center;
+}
+
+.about-label {
+    color: #d18b1d;
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    letter-spacing: 2px;
+}
+
+.about h2 {
+    font-size:
+        clamp(32px, 5vw, 47px);
+
+    line-height: 1.15;
+
+    margin:
+        10px 0 20px;
+}
+
+.about h2 span {
+    color: #2d8060;
+}
+
+.about p {
+    color: #747e79;
+
+    font-size: 14px;
+
+    margin-bottom: 15px;
+}
+
+.about-list {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 12px;
+
+    margin-top: 25px;
+}
+
+.about-list div {
+    display: flex;
+
+    align-items: center;
+
+    gap: 9px;
+
+    font-size: 13px;
+
+    font-weight: 600;
+}
+
+.about-list i {
+    color: #2d8060;
+}
+
+.about-photo {
+    position: relative;
+}
+
+.about-photo > img {
+    height: 470px;
+
+    object-fit: cover;
+
+    border-radius: 20px;
+}
+
+.photo-caption {
+    position: absolute;
+
+    left: 20px;
+    bottom: 20px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    padding: 14px 18px;
+
+    color: white;
+
+    background:
+        rgba(12, 27, 23, .88);
+
+    backdrop-filter: blur(8px);
+
+    border-radius: 10px;
+}
+
+.photo-caption > i {
+    color: #f3b34e;
+
+    font-size: 20px;
+}
+
+.photo-caption strong,
+.photo-caption span {
+    display: block;
+}
+
+.photo-caption strong {
+    font-size: 13px;
+}
+
+.photo-caption span {
+    color: #b8c2bd;
+
+    font-size: 11px;
+}
+
+
+/* =========================================
+   CTA
+========================================= */
+
+.cta {
+    padding: 90px 20px;
+
+    text-align: center;
+
+    color: white;
+
+    background:
+        linear-gradient(
+            110deg,
+            #28745a,
+            #173f34
+        );
+}
+
+.cta > i {
+    color: #f3b34e;
+
+    font-size: 35px;
+
+    margin-bottom: 10px;
+}
+
+.cta h2 {
+    font-size:
+        clamp(32px, 5vw, 48px);
+
+    margin-bottom: 10px;
+}
+
+.cta p {
+    color: #d0ded8;
+
+    max-width: 580px;
+
+    margin:
+        0 auto 25px;
+}
+
+
+/* =========================================
+   FOOTER
+========================================= */
+
+footer {
+    padding:
+        60px 0 20px;
+
+    color: white;
+
+    background: #0a1916;
+}
+
+.footer-grid {
+    display: grid;
+
+    grid-template-columns:
+        1.5fr 1fr 1fr 1fr;
+
+    gap: 40px;
+
+    padding-bottom: 40px;
+}
+
+.footer-brand > p {
+    max-width: 300px;
+
+    color: #899a93;
+
+    font-size: 13px;
+
+    margin-top: 15px;
+}
+
+footer h4 {
+    font-size: 14px;
+
+    margin-bottom: 15px;
+}
+
+.footer-grid > div:not(.footer-brand) a {
+    display: block;
+
+    color: #899a93;
+
+    font-size: 13px;
+
+    margin-bottom: 8px;
+
+    transition: .3s;
+}
+
+.footer-grid > div:not(.footer-brand) a:hover {
+    color: #f3b34e;
+}
+
+.footer-location {
+    color: #899a93;
+
+    font-size: 13px;
+}
+
+.copyright {
+    padding-top: 20px;
+
+    border-top:
+        1px solid #19302a;
+
+    text-align: center;
+
+    color: #61736c;
+
+    font-size: 11px;
+}
+
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 900px) {
+
+    .quick-grid {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+    .places-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .place-card.large {
+        grid-column: span 1;
+
+        display: block;
+    }
+
+    .place-card.large .place-image {
+        height: 300px;
+    }
+
+    .culture-grid {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+    .about-grid {
+        grid-template-columns: 1fr;
+
+        gap: 45px;
+    }
+
+    .footer-grid {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 650px) {
+
+    .navbar {
+        height: 70px;
+    }
+
+    .menu-btn {
+        display: block;
+    }
+
+    .nav-menu {
+        position: absolute;
+
+        top: 70px;
+        left: 0;
+
+        width: 100%;
+
+        display: flex;
+
+        flex-direction: column;
+
+        gap: 0;
+
+        background: #0d211d;
+
+        max-height: 0;
+
+        overflow: hidden;
+
+        transition: .3s;
+    }
+
+    .nav-menu.show {
+        max-height: 400px;
+
+        padding:
+            8px 5%;
+    }
+
+    .nav-menu li {
+        padding: 13px 0;
+
+        border-bottom:
+            1px solid
+            rgba(255,255,255,.08);
+    }
+
+    .hero {
+        min-height: 90vh;
+    }
+
+    .hero h1 {
+        font-size: 46px;
+    }
+
+    .hero p {
+        font-size: 14px;
+    }
+
+    .quick-section {
+        margin-top: -25px;
+    }
+
+    .quick-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .section {
+        padding: 70px 0;
+    }
+
+    .nature-section {
+        min-height: 650px;
+    }
+
+    .nature-features {
+        flex-direction: column;
+
+        gap: 20px;
+    }
+
+    .culture-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .about-list {
+        grid-template-columns: 1fr;
+    }
+
+    .about-photo > img {
+        height: 350px;
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr;
+    }
+
+}
